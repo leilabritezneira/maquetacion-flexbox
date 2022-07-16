@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parentContainer {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.uno {
+    background-color: #F0223B;
+    width: 70vw;
+    height: 10vh;
+    display: flex;
+    padding-left: 1%;
+}
+
+.dos {
+    background-color: #FA23A9;
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    padding-right: 1%;
+}
+
+.tres {
+    background-color: #8D0E96;
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1%;
+}
+
+.cuatro {
+    background-color: #14E3B5;
+    width: 50vw;
+    height: 35vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinco {
+    background-color: #15967A;
+    width: 50vw;
+    height: 35vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.seis {
+    background-color: #D72BE3;
+    width: 33.3vw;
+    height: 20vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 1%;
+}
+
+.siete {
+    background-color: #F34AFF;
+    width: 33.3vw;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 1%;
+}
+.ocho {
+    background-color: #7BE32B;
+    width: 33.3vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
