@@ -1,95 +1,185 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Graphik,sans-serif;
+}
+nav{
+    display: flex;
+    width: 100%;
+    height: 66px;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    border: 0px solid transparent;
+    padding: 0 2%;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    /* background: linear-gradient(to  right, #ca021c 71.4%, white 40%); */
+    /* con esto no es necesario preocuparse por el color de fondo del nav*/
+    background-color: transparent;
+    font-size: 14px;
+    transition: background .3s;
 }
 
-.parentContainer {
-    background-color: black;
-    width: 100vw;
+.nav-izq {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1pt;     
+    word-spacing: 3.5pt;       
+    text-indent: 12pt;    
+    color: white;
+}
+
+.nav-1 {
+    display: flex;
+}
+
+.nav-1 a {
+    color: #fff;
+}
+
+.nav-der {
+    width: 20%;
+    display: flex;
+    letter-spacing: 1pt;     
+    word-spacing: 3.5pt;         
+    text-indent: 12pt;       
+    justify-content: center;
+    align-items:center;
+    
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    letter-spacing: 0px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -3px;
+    left: 6px;
+    
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-1 a::after {
+    background-color: #fff;
+}
+
+.nav-der a::after {
+    background-color: #000;
+}
+
+.nav-der a:last-child::after {
+    content: none;
+}
+
+nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+.rojo {
+    background-image: url(https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    font-size: 35px;
     height: 100vh;
+    
+}
+
+.blanco {
+    width: 40%;
+    display: flex;
+}
+
+.texto-blanco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3%;
+    font-size: 90%;
+}
+
+h1, h5 {
+    font-size: 1.7em     
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 2%;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 2%;
+}
+
+.texto-blanco p {
+    padding-bottom: 2%;
+}
+
+section {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    padding: 5% 3%;
+    justify-content: space-between;
 }
 
-.subContainer{
-    display: flex;
-    flex-direction: column;
-}
-
-.uno {
-    background-color: #F0223B;
-    width: 70vw;
-    height: 10vh;
-    display: flex;
-    padding-left: 1%;
-}
-
-.dos {
-    background-color: #FA23A9;
-    width: 30vw;
-    height: 10vh;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column-reverse;
-    padding-right: 1%;
-}
-
-.tres {
-    background-color: #8D0E96;
-    width: 50vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 1%;
-}
-
-.cuatro {
-    background-color: #14E3B5;
-    width: 50vw;
-    height: 35vh;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
-
-.cinco {
-    background-color: #15967A;
-    width: 50vw;
-    height: 35vh;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-}
-
-.seis {
-    background-color: #D72BE3;
-    width: 33.3vw;
-    height: 20vh;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    padding-right: 1%;
-}
-
-.siete {
-    background-color: #F34AFF;
-    width: 33.3vw;
-    height: 20vh;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    padding-left: 1%;
-}
-.ocho {
-    background-color: #7BE32B;
-    width: 33.3vw;
-    height: 20vh;
+.tarj {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
+    width: 30%;
+    word-spacing: 2.5pt;  
+          
+}
+
+.text-tarj {
+    padding-left: 4%;
+    font-size: 14px;
+}
+.text-tarj p {
+    margin-bottom: 4%;
+}
+
+a {
+    color: black;
+}
+
+.background-white {
+    background: #fff;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+/* estilos del nav para cuando se escrollea hacia abajo */
+.background-white a,
+.background-white h2 {
+    color: #000;
+}
+
+.background-white .nav-1 a::after {
+    background-color: #000;
 }
